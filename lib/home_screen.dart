@@ -76,9 +76,10 @@ class _HomeScreenState extends State<HomeScreen> {
     //canlı olarak hem firebase hem de telefon ekranından kullanıcı update etme
     _users.doc(userId).update({
       "name": _nameController.text,
-      "profession": _professionController,
+      "profession": _professionController.text,
     });
 
+    // Metin alanları temizleniyor.
     _nameController.clear();
     _professionController.clear();
   }
